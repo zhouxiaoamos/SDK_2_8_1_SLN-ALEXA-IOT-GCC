@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ksdk:examples xmlns:ksdk="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd manifest.xsd">
+  <externalDefinitions>
+    <definition extID="com.nxp.mcuxpresso"/>
+    <definition extID="component.codec_i2c.MIMXRT106A"/>
+    <definition extID="component.lists.MIMXRT106A"/>
+    <definition extID="component.lpi2c_adapter.MIMXRT106A"/>
+    <definition extID="component.lpuart_adapter.MIMXRT106A"/>
+    <definition extID="component.osa.MIMXRT106A"/>
+    <definition extID="component.osa_free_rtos.MIMXRT106A"/>
+    <definition extID="component.serial_manager.MIMXRT106A"/>
+    <definition extID="component.serial_manager_uart.MIMXRT106A"/>
+    <definition extID="component.serial_manager_usb_cdc.MIMXRT106A"/>
+    <definition extID="component.tfa9xxx_adapter.MIMXRT106A"/>
+    <definition extID="device.MIMXRT106A_CMSIS.MIMXRT106A"/>
+    <definition extID="driver.codec.MIMXRT106A"/>
+    <definition extID="driver.tfa9xxx.MIMXRT106A"/>
+    <definition extID="middleware.amazon_acs.flash_map.MIMXRT106A"/>
+    <definition extID="middleware.amazon_acs.flash_map.config_is26kl256s.MIMXRT106A"/>
+    <definition extID="middleware.amazon_acs_dpk.MIMXRT106A"/>
+    <definition extID="middleware.amazon_acs_hal.MIMXRT106A"/>
+    <definition extID="middleware.amazon_acs_sdk.MIMXRT106A"/>
+    <definition extID="middleware.audio_streamer.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.de_DE.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.en_AU.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.en_CA.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.en_GB.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.en_IN.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.en_US.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.es_ES.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.es_MX.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.es_US.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.fr_CA.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.fr_FR.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.hi_IN.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.it_IT.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.ja_JP.MIMXRT106A"/>
+    <definition extID="middleware.avs_sound_library.pt_BR.MIMXRT106A"/>
+    <definition extID="middleware.aws_ais.MIMXRT106A"/>
+    <definition extID="middleware.ble_wiced.MIMXRT106A"/>
+    <definition extID="middleware.ble_wiced.common.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.demos.dev_mode_key_provisioning.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.3rdparty.pkcs11.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.abstractions.platform.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.abstractions.secure_sockets.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.abstractions.wifi.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.freertos_plus.standard.crypto.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.freertos_plus.standard.pkcs11.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.freertos_plus.standard.tls.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.libraries.freertos_plus.standard.utils.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.network_manager.MIMXRT106A"/>
+    <definition extID="middleware.freertos-aws_iot.vendor.nxp.secure_sockets.lwip.MIMXRT106A"/>
+    <definition extID="middleware.freertos-kernel.MIMXRT106A"/>
+    <definition extID="middleware.freertos-kernel.extension.MIMXRT106A"/>
+    <definition extID="middleware.freertos-kernel.heap_4.MIMXRT106A"/>
+    <definition extID="middleware.lwip.MIMXRT106A"/>
+    <definition extID="middleware.mbedtls.MIMXRT106A"/>
+    <definition extID="middleware.mbedtls.port.ksdk.MIMXRT106A"/>
+    <definition extID="middleware.mcu_voice_libs_public.sln_afe.MIMXRT106A"/>
+    <definition extID="middleware.mcu_voice_libs_public.sln_dsp_toolbox.MIMXRT106A"/>
+    <definition extID="middleware.py_crc.MIMXRT106A"/>
+    <definition extID="middleware.sdmmc.common.MIMXRT106A"/>
+    <definition extID="middleware.sdmmc.host.usdhc.MIMXRT106A"/>
+    <definition extID="middleware.sdmmc.host.usdhc.freertos.MIMXRT106A"/>
+    <definition extID="middleware.sdmmc.osa.freertos.MIMXRT106A"/>
+    <definition extID="middleware.sdmmc.sdio.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.aws_cred.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.aws_pkcs11.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.device_utils.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.fica_definition.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.flexspi_hyperflash.config_is26kl256s.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.mqtt_connection.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.network.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.pdm_to_pcm_task.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_amplifier.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_encrypt.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_flash.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_flash_mgmt.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_pdm_mic.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_rgb_led.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.sln_rgb_led_pwm.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.tfa9xxx_amplifier.MIMXRT106A"/>
+    <definition extID="middleware.sln_iot_common_platform.wifi_credentials.MIMXRT106A"/>
+    <definition extID="middleware.usb.common_header.MIMXRT106A"/>
+    <definition extID="middleware.usb.device.cdc.external.MIMXRT106A"/>
+    <definition extID="middleware.usb.device.common_header.MIMXRT106A"/>
+    <definition extID="middleware.usb.device.controller.driver.MIMXRT106A"/>
+    <definition extID="middleware.usb.device.stack.external.MIMXRT106A"/>
+    <definition extID="middleware.usb.device_controller_ehci.MIMXRT106A"/>
+    <definition extID="middleware.usb.phy.MIMXRT106A"/>
+    <definition extID="middleware.uvoice.amazon.MIMXRT106A"/>
+    <definition extID="middleware.uvoice.amazon.cm7.MIMXRT106A"/>
+    <definition extID="middleware.uvoice.avs.smart_home.MIMXRT106A"/>
+    <definition extID="middleware.wifi_wiced.4343W.MIMXRT106A"/>
+    <definition extID="middleware.wifi_wiced.MIMXRT106A"/>
+    <definition extID="middleware.wifi_wiced.MURATA_TYPE1DX.MIMXRT106A"/>
+    <definition extID="platform.Include_common.MIMXRT106A"/>
+    <definition extID="platform.Include_core_cm7.MIMXRT106A"/>
+    <definition extID="platform.Include_dsp.MIMXRT106A"/>
+    <definition extID="platform.devices.MIMXRT106A_startup.MIMXRT106A"/>
+    <definition extID="platform.drivers.cache_armv7_m7.MIMXRT106A"/>
+    <definition extID="platform.drivers.clock.MIMXRT106A"/>
+    <definition extID="platform.drivers.common.MIMXRT106A"/>
+    <definition extID="platform.drivers.dcp.MIMXRT106A"/>
+    <definition extID="platform.drivers.dmamux.MIMXRT106A"/>
+    <definition extID="platform.drivers.edma.MIMXRT106A"/>
+    <definition extID="platform.drivers.flexram.MIMXRT106A"/>
+    <definition extID="platform.drivers.flexspi.MIMXRT106A"/>
+    <definition extID="platform.drivers.gpt.MIMXRT106A"/>
+    <definition extID="platform.drivers.igpio.MIMXRT106A"/>
+    <definition extID="platform.drivers.iomuxc.MIMXRT106A"/>
+    <definition extID="platform.drivers.lpi2c.MIMXRT106A"/>
+    <definition extID="platform.drivers.lpuart.MIMXRT106A"/>
+    <definition extID="platform.drivers.lpuart_freertos.MIMXRT106A"/>
+    <definition extID="platform.drivers.pit.MIMXRT106A"/>
+    <definition extID="platform.drivers.pwm.MIMXRT106A"/>
+    <definition extID="platform.drivers.sai.MIMXRT106A"/>
+    <definition extID="platform.drivers.sai_edma.MIMXRT106A"/>
+    <definition extID="platform.drivers.snvs_hp.MIMXRT106A"/>
+    <definition extID="platform.drivers.trng.MIMXRT106A"/>
+    <definition extID="platform.drivers.usdhc.MIMXRT106A"/>
+    <definition extID="platform.drivers.xbara.MIMXRT106A"/>
+    <definition extID="platform.drivers.xip_board.MIMXRT106A"/>
+    <definition extID="platform.drivers.xip_device.MIMXRT106A"/>
+    <definition extID="platform.utilities.assert.MIMXRT106A"/>
+    <definition extID="platform.utilities.misc_utilities.MIMXRT106A"/>
+    <definition extID="utility.debug_console.MIMXRT106A"/>
+    <definition extID="utility.shell.MIMXRT106A"/>
+    <definition extID="armgcc"/>
+    <definition extID="mcuxpresso"/>
+    <definition extID="com.crt.advproject.config.exe.debug"/>
+    <definition extID="com.crt.advproject.config.exe.release"/>
+  </externalDefinitions>
+  <example id="sln_alexa_iot_ais_ffs_demo" name="ais_ffs_demo" category="acs_ffs_examples" dependency="component.serial_manager.MIMXRT106A platform.drivers.common.MIMXRT106A component.lists.MIMXRT106A component.serial_manager_usb_cdc.MIMXRT106A platform.drivers.cache_armv7_m7.MIMXRT106A driver.codec.MIMXRT106A component.tfa9xxx_adapter.MIMXRT106A platform.drivers.gpt.MIMXRT106A middleware.ble_wiced.common.MIMXRT106A middleware.lwip.MIMXRT106A utility.debug_console.MIMXRT106A middleware.wifi_wiced.MURATA_TYPE1DX.MIMXRT106A middleware.sln_iot_common_platform.sln_amplifier.MIMXRT106A middleware.sln_iot_common_platform.sln_flash_mgmt.MIMXRT106A middleware.freertos-kernel.MIMXRT106A platform.drivers.dmamux.MIMXRT106A platform.drivers.edma.MIMXRT106A platform.drivers.sai.MIMXRT106A platform.drivers.sai_edma.MIMXRT106A middleware.sln_iot_common_platform.sln_flash.MIMXRT106A middleware.sln_iot_common_platform.flexspi_hyperflash.config_is26kl256s.MIMXRT106A middleware.sln_iot_common_platform.sln_rgb_led_pwm.MIMXRT106A middleware.usb.phy.MIMXRT106A middleware.usb.device.controller.driver.MIMXRT106A component.osa.MIMXRT106A middleware.usb.device_controller_ehci.MIMXRT106A middleware.amazon_acs.flash_map.config_is26kl256s.MIMXRT106A component.codec_i2c.MIMXRT106A component.lpi2c_adapter.MIMXRT106A platform.drivers.lpuart_freertos.MIMXRT106A platform.drivers.pit.MIMXRT106A platform.drivers.snvs_hp.MIMXRT106A utility.shell.MIMXRT106A middleware.amazon_acs_dpk.MIMXRT106A middleware.amazon_acs_sdk.MIMXRT106A middleware.amazon_acs_hal.MIMXRT106A middleware.aws_ais.MIMXRT106A middleware.audio_streamer.MIMXRT106A middleware.mbedtls.MIMXRT106A middleware.mbedtls.port.ksdk.MIMXRT106A middleware.uvoice.amazon.MIMXRT106A middleware.uvoice.amazon.cm7.MIMXRT106A middleware.freertos-kernel.heap_4.MIMXRT106A middleware.freertos-aws_iot.MIMXRT106A middleware.freertos-aws_iot.demos.dev_mode_key_provisioning.MIMXRT106A middleware.freertos-aws_iot.libraries.3rdparty.pkcs11.MIMXRT106A middleware.freertos-aws_iot.libraries.abstractions.wifi.MIMXRT106A middleware.freertos-aws_iot.libraries.abstractions.secure_sockets.MIMXRT106A middleware.freertos-aws_iot.libraries.abstractions.platform.MIMXRT106A middleware.freertos-aws_iot.libraries.freertos_plus.standard.crypto.MIMXRT106A middleware.freertos-aws_iot.libraries.freertos_plus.standard.pkcs11.MIMXRT106A middleware.freertos-aws_iot.libraries.freertos_plus.standard.tls.MIMXRT106A middleware.freertos-aws_iot.libraries.freertos_plus.standard.utils.MIMXRT106A middleware.freertos-aws_iot.vendor.nxp.secure_sockets.lwip.MIMXRT106A middleware.freertos-aws_iot.network_manager.MIMXRT106A middleware.mcu_voice_libs_public.sln_afe.MIMXRT106A middleware.mcu_voice_libs_public.sln_dsp_toolbox.MIMXRT106A middleware.sln_iot_common_platform.aws_cred.MIMXRT106A middleware.sln_iot_common_platform.aws_pkcs11.MIMXRT106A middleware.sln_iot_common_platform.device_utils.MIMXRT106A middleware.sln_iot_common_platform.mqtt_connection.MIMXRT106A middleware.sln_iot_common_platform.pdm_to_pcm_task.MIMXRT106A middleware.sln_iot_common_platform.sln_pdm_mic.MIMXRT106A middleware.sln_iot_common_platform.wifi_credentials.MIMXRT106A middleware.sdmmc.sdio.MIMXRT106A middleware.sdmmc.common.MIMXRT106A middleware.sdmmc.host.usdhc.MIMXRT106A middleware.sdmmc.host.usdhc.freertos.MIMXRT106A middleware.uvoice.avs.smart_home.MIMXRT106A middleware.avs_sound_library.MIMXRT106A platform.drivers.clock.MIMXRT106A device.MIMXRT106A_CMSIS.MIMXRT106A component.lpuart_adapter.MIMXRT106A component.serial_manager_uart.MIMXRT106A platform.drivers.lpuart.MIMXRT106A platform.devices.MIMXRT106A_startup.MIMXRT106A platform.drivers.iomuxc.MIMXRT106A platform.utilities.assert.MIMXRT106A platform.drivers.igpio.MIMXRT106A platform.drivers.xip_device.MIMXRT106A platform.drivers.xip_board.MIMXRT106A platform.drivers.dcp.MIMXRT106A platform.drivers.trng.MIMXRT106A platform.drivers.flexram.MIMXRT106A platform.drivers.flexspi.MIMXRT106A platform.Include_core_cm7.MIMXRT106A platform.Include_common.MIMXRT106A platform.Include_dsp.MIMXRT106A middleware.usb.device.cdc.external.MIMXRT106A middleware.usb.device.stack.external.MIMXRT106A driver.tfa9xxx.MIMXRT106A middleware.ble_wiced.MIMXRT106A middleware.freertos-kernel.extension.MIMXRT106A middleware.wifi_wiced.4343W.MIMXRT106A middleware.wifi_wiced.MIMXRT106A middleware.sln_iot_common_platform.sln_encrypt.MIMXRT106A middleware.sln_iot_common_platform.fica_definition.MIMXRT106A platform.drivers.xbara.MIMXRT106A platform.drivers.pwm.MIMXRT106A middleware.sln_iot_common_platform.sln_rgb_led.MIMXRT106A middleware.usb.common_header.MIMXRT106A middleware.usb.device.common_header.MIMXRT106A platform.drivers.lpi2c.MIMXRT106A middleware.py_crc.MIMXRT106A middleware.sln_iot_common_platform.network.MIMXRT106A middleware.sdmmc.osa.freertos.MIMXRT106A component.osa_free_rtos.MIMXRT106A platform.drivers.usdhc.MIMXRT106A middleware.avs_sound_library.de_DE.MIMXRT106A middleware.avs_sound_library.en_AU.MIMXRT106A middleware.avs_sound_library.en_CA.MIMXRT106A middleware.avs_sound_library.en_GB.MIMXRT106A middleware.avs_sound_library.en_IN.MIMXRT106A middleware.avs_sound_library.en_US.MIMXRT106A middleware.avs_sound_library.es_ES.MIMXRT106A middleware.avs_sound_library.es_MX.MIMXRT106A middleware.avs_sound_library.es_US.MIMXRT106A middleware.avs_sound_library.fr_CA.MIMXRT106A middleware.avs_sound_library.fr_FR.MIMXRT106A middleware.avs_sound_library.hi_IN.MIMXRT106A middleware.avs_sound_library.it_IT.MIMXRT106A middleware.avs_sound_library.ja_JP.MIMXRT106A middleware.avs_sound_library.pt_BR.MIMXRT106A platform.utilities.misc_utilities.MIMXRT106A middleware.sln_iot_common_platform.tfa9xxx_amplifier.MIMXRT106A middleware.amazon_acs.flash_map.MIMXRT106A">
+    <projects>
+      <project type="com.crt.advproject.projecttype.exe" nature="org.eclipse.cdt.core.cnature"/>
+    </projects>
+    <memory>
+      <memoryBlock addr="60300000" size="00A00000" access="RO" type="ExtFlash" id="BOARD_FLASH_sln_alexa_iot" name="BOARD_FLASH"/>
+      <memoryBlock addr="20000000" size="00070000" access="RW" type="RAM" id="SRAM_DTC_sln_alexa_iot" name="SRAM_DTC"/>
+      <memoryBlock addr="00000000" size="00010000" access="RW" type="RAM" id="SRAM_ITC_sln_alexa_iot" name="SRAM_ITC"/>
+      <memoryBlock addr="20200000" size="00040000" access="RW" type="RAM" id="SRAM_OC_NON_CACHEABLE_sln_alexa_iot" name="SRAM_OC_NON_CACHEABLE"/>
+      <memoryBlock addr="20240000" size="00040000" access="RW" type="RAM" id="SRAM_OC_CACHEABLE_sln_alexa_iot" name="SRAM_OC_CACHEABLE"/>
+    </memory>
+    <toolchainSettings>
+      <toolchainSetting id_refs="com.nxp.mcuxpresso">
+        <option id="com.crt.advproject.gas.fpu" type="enum">
+          <value>com.crt.advproject.gas.fpu.fpv5dp.hard</value>
+        </option>
+        <option id="com.crt.advproject.gcc.fpu" type="enum">
+          <value>com.crt.advproject.gcc.fpu.fpv5dp.hard</value>
+        </option>
+        <option id="com.crt.advproject.c.misc.dialect" type="enum">
+          <value>com.crt.advproject.misc.dialect.gnu99</value>
+        </option>
+        <option id="com.crt.advproject.gcc.exe.debug.option.debugging.level" type="enum">
+          <value>gnu.c.debugging.level.default</value>
+        </option>
+        <option id="com.crt.advproject.gcc.exe.debug.option.optimization.level" type="enum">
+          <value>gnu.c.optimization.level.more</value>
+        </option>
+        <option id="gnu.c.compiler.option.preprocessor.def.symbols" type="stringList">
+          <value>CPU_MIMXRT106ADVL6A</value>
+          <value>CPU_MIMXRT106ADVL6A_cm7</value>
+          <value>SDK_DEBUGCONSOLE=1</value>
+          <value>PRINTF_FLOAT_ENABLE=0</value>
+          <value>SCANF_FLOAT_ENABLE=0</value>
+          <value>PRINTF_ADVANCED_ENABLE=0</value>
+          <value>SCANF_ADVANCED_ENABLE=0</value>
+          <value>XIP_EXTERNAL_FLASH=1</value>
+          <value>XIP_BOOT_HEADER_ENABLE=1</value>
+          <value>XIP_BOOT_HEADER_DCD_ENABLE=1</value>
+          <value>APP_MAJ_VER=0x02</value>
+          <value>APP_MIN_VER=0x00</value>
+          <value>APP_BLD_VER=0x0000</value>
+          <value>DEBUG_CONSOLE_ENABLE_ECHO</value>
+          <value>USB_CDC_SERIAL_MANAGER_RUN_NO_HOST=1</value>
+          <value>RELOCATE_VECTOR_TABLE=1</value>
+          <value>HAL_UART_TRANSFER_MODE=1</value>
+          <value>TFA9XXX_DEV_NUM=1</value>
+          <value>USE_TFA=1</value>
+          <value>USE_TFA9894_PUI=1</value>
+          <value>WICED_BLUETOOTH_PLATFORM</value>
+          <value>ACE_HAL_DEVICE_INFO_PRODUCT_NAME='"SLN_ALEXA_IOT"'</value>
+          <value>ACE_HAL_DEVICE_INFO_HARDWARE_NAME='"MIMXRT106A"'</value>
+          <value>ERASE_PARTIAL_SECTORS=1</value>
+          <value>__SEMIHOST_HARDFAULT_DISABLE=1</value>
+          <value>SERIAL_PORT_TYPE_USBCDC=1</value>
+          <value>SERIAL_MANAGER_NON_BLOCKING_MODE=1</value>
+          <value>UART1_BLE_SERIAL_MANANGER_BLOCKING_MODE=1</value>
+          <value>USB_STACK_FREERTOS_HEAP_SIZE=65536</value>
+          <value>USB_STACK_FREERTOS</value>
+          <value>BOARD_USE_VIRTUALCOM=1</value>
+          <value>DEBUG_CONSOLE_IO_USBCDC=1</value>
+          <value>DEBUG_CONSOLE_TRANSFER_NON_BLOCKING</value>
+          <value>ARM_MATH_CM7</value>
+          <value>CR_INTEGER_PRINTF</value>
+          <value>SDK_I2C_BASED_COMPONENT_USED=1</value>
+          <value>SDK_SAI_BASED_COMPONENT_USED=1</value>
+          <value>USE_RTOS=1</value>
+          <value>FSL_RTOS_FREE_RTOS</value>
+          <value>LWIP_DNS=1</value>
+          <value>LWIP_DHCP=1</value>
+          <value>LWIP_TIMEVAL_PRIVATE=0</value>
+          <value>RTOS</value>
+          <value>AMAZON_MBEDTLS_LWIP_PATCHES</value>
+          <value>CONFIG_FLEXRAM_AT_STARTUP=1</value>
+          <value>SNTP_SERVER_DNS=1</value>
+          <value>SDK_DEBUGCONSOLE_UART</value>
+          <value>ACE_HAL_DEVICE_INFO_MANUFACTURER_NAME='"NXP"'</value>
+          <value>ACE_HAL_DEVICE_INFO_OS_VERSION='"10.3.0"'</value>
+          <value>ACE_WIFI_ENABLE_MW_AUTO_CONNECT_NXP</value>
+          <value>MBEDTLS_CONFIG_FILE='"aws_mbedtls_config.h"'</value>
+          <value>AWS_LOGGING_INCLUDE='"iot_logging_task.h"'</value>
+          <value>AWS_SYS_INIT_INCLUDE='"iot_system_init.h"'</value>
+          <value>AWS_MQTT_AGENT_INCLUDE='"iot_mqtt_agent.h"'</value>
+          <value>AWS_VERSION_INCLUDE='"iot_appversion32.h"'</value>
+          <value>DEMO_NETWORK_TYPE=AWSIOT_NETWORK_TYPE_WIFI</value>
+          <value>malloc=pvPortMalloc</value>
+          <value>free=vPortFree</value>
+          <value>calloc=pvPortCalloc</value>
+          <value>realloc=pvPortRealloc</value>
+          <value>FFS_ENABLED</value>
+          <value>SERIAL_PORT_TYPE_USBCDC=1</value>
+          <value>USB_DEVICE_CONFIG_CDC_ACM=1</value>
+          <value>SDK_I2C_BASED_COMPONENT_USED=1</value>
+          <value>DEBUG_CONSOLE_RX_ENABLE=0</value>
+          <value>ACE_COMPONENT_libace_connectivity_manager</value>
+          <value>ACE_COMPONENT_hal_factoryreset</value>
+          <value>ACE_COMPONENT_hal_device_info</value>
+          <value>ACE_COMPONENT_hal_kv_storage</value>
+          <value>ACE_COMPONENT_hal_dha</value>
+          <value>SLN_AFE_LIB</value>
+          <value>SLN_DSP_TOOLBOX_LIB</value>
+          <value>SDIO_ENABLED</value>
+          <value>SERIAL_PORT_TYPE_UART=1</value>
+          <value>BOARD_USE_CODEC=1</value>
+          <value>CODEC_TFA9XXX_ENABLE</value>
+          <value>WIFI_WICED</value>
+        </option>
+        <option id="gnu.c.compiler.option.optimization.flags" type="string">
+          <value>-fno-common</value>
+        </option>
+        <option id="gnu.c.compiler.option.misc.other" type="string">
+          <value>-mno-unaligned-access  -fomit-frame-pointer  -c  -ffunction-sections  -fdata-sections  -ffreestanding  -fno-builtin</value>
+        </option>
+        <option id="com.crt.advproject.link.fpu" type="enum">
+          <value>com.crt.advproject.link.fpu.fpv5dp.hard</value>
+        </option>
+        <option id="gnu.c.link.option.nostdlibs" type="boolean">
+          <value>true</value>
+        </option>
+        <option id="gnu.c.link.option.other" type="stringList">
+          <value>--whole-archive</value>
+          <value>-lace_bt</value>
+          <value>-lace_connectivity_manager</value>
+          <value>-lace_dispatcher</value>
+          <value>-lace_hsm</value>
+          <value>-lace_ffs</value>
+          <value>-lace_osal</value>
+          <value>-lace_fr</value>
+          <value>-lstreamer</value>
+          <value>-lmp3dec</value>
+          <value>-lwavdec</value>
+          <value>-lopusdec</value>
+          <value>-lsrc48k</value>
+          <value>-lccicontainer</value>
+          <value>-lccimeta</value>
+          <value>-lcommon</value>
+          <value>-losa</value>
+          <value>--no-whole-archive</value>
+          <value>--gc-sections</value>
+          <value>-print-memory-usage</value>
+          <value>-z</value>
+          <value>muldefs</value>
+        </option>
+        <option id="com.crt.advproject.link.memory.heapAndStack" type="string">
+          <value>&amp;Heap:SRAM_OC_NON_CACHEABLE;Post Data;0x1000&amp;Stack:SRAM_OC_NON_CACHEABLE;Post Data;0x1000</value>
+        </option>
+        <option id="com.crt.advproject.link.memory.sections" type="stringList">
+          <value>isd=*(NonCacheable.init);region=SRAM_DTC;type=.data</value>
+          <value>isd=*(NonCacheable);region=SRAM_DTC;type=.bss</value>
+          <value>isd=*(.ocram_non_cacheable_data);region=SRAM_OC_NON_CACHEABLE;type=.data</value>
+          <value>isd=*(.ocram_non_cacheable_bss);region=SRAM_OC_NON_CACHEABLE;type=.bss</value>
+          <value>isd=*(.ocram_cacheable_data);region=SRAM_OC_CACHEABLE;type=.data</value>
+          <value>isd=*(.vectorTableRam);region=SRAM_ITC;type=.data</value>
+        </option>
+        <option id="com.crt.advproject.gas.hdrlib" type="enum">
+          <value>com.crt.advproject.gas.hdrlib.newlibnano</value>
+        </option>
+        <option id="com.crt.advproject.gas.specs" type="enum">
+          <value>com.crt.advproject.gas.specs.newlibnano</value>
+        </option>
+        <option id="com.crt.advproject.gcc.hdrlib" type="enum">
+          <value>com.crt.advproject.gcc.hdrlib.newlibnano</value>
+        </option>
+        <option id="com.crt.advproject.gcc.specs" type="enum">
+          <value>com.crt.advproject.gcc.specs.newlibnano</value>
+        </option>
+        <option id="com.crt.advproject.link.gcc.hdrlib" type="enum">
+          <value>com.crt.advproject.gcc.link.hdrlib.newlibnano.nohost</value>
+        </option>
+        <option id="com.crt.advproject.gcc.exe.release.option.debugging.level" type="enum">
+          <value>gnu.c.debugging.level.default</value>
+        </option>
+        <option id="com.crt.advproject.gcc.exe.release.option.optimization.level" type="enum">
+          <value>gnu.c.optimization.level.more</value>
+        </option>
+      </toolchainSetting>
+    </toolchainSettings>
+    <debug_configurations>
+      <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+        <drivers>
+          <driver id_refs="BOARD_FLASH_sln_alexa_iot">
+            <driverBinary path="boards/sln_alexa_iot/mcuxpresso" type="binary" target_path="binary">
+              <files mask="MIMXRT106A-SLN-ALEXA-IOT_S26KS512S.cfx"/>
+            </driverBinary>
+          </driver>
+        </drivers>
+      </debug_configuration>
+    </debug_configurations>
+    <include_paths>
+      <include_path path="amazon_acs/ace/sdk/include"/>
+      <include_path path="freertos/libraries/abstractions/platform/freertos/include"/>
+      <include_path path="freertos/libraries/abstractions/platform/include"/>
+      <include_path path="freertos/libraries/c_sdk/standard/mqtt/src"/>
+      <include_path path="lwip/port"/>
+      <include_path path="lwip/src"/>
+      <include_path path="lwip/src/include"/>
+      <include_path path="mbedtls/include"/>
+      <include_path path="wiced/43xxx_BLE/bt_app_inc"/>
+      <include_path path="wiced/43xxx_BLE/wiced_bt/BTE/Components/stack/include"/>
+      <include_path path="wiced/43xxx_BLE/wiced_bt/BTE/Projects/bte/main"/>
+      <include_path path="wiced/43xxx_BLE/wiced_bt/BTE/WICED"/>
+      <include_path path="wiced/43xxx_BLE/wiced_bt/imxrt_port"/>
+    </include_paths>
+    <source path="boards/sln_alexa_iot/common" target_path="source" type="c_include">
+      <files mask="sln_cfg_file.h"/>
+      <files mask="sln_file_table.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo/armgcc" target_path="sln_alexa_iot/sln_acs_examples/ais_ffs_demo/ld" type="linker" toolchain="armgcc">
+      <files mask="ais_ffs_demo.ld"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo/config_files" target_path="config_files" type="c_include">
+      <files mask="FreeRTOSConfig.h"/>
+      <files mask="FreeRTOSIPConfig.h"/>
+      <files mask="avs_support_locale_config.h"/>
+      <files mask="aws_demo_config.h"/>
+      <files mask="aws_iot_network_config.h"/>
+      <files mask="aws_mbedtls_config.h"/>
+      <files mask="aws_mqtt_config.h"/>
+      <files mask="aws_secure_sockets_config.h"/>
+      <files mask="aws_shadow_config.h"/>
+      <files mask="aws_wifi_config.h"/>
+      <files mask="iot_config.h"/>
+      <files mask="iot_config_common.h"/>
+      <files mask="iot_mqtt_agent_config.h"/>
+      <files mask="iot_pkcs11_config.h"/>
+      <files mask="lwipopts.h"/>
+      <files mask="pdm_pcm_definitions.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="amazon_acs/apps/common/startup/inc" type="c_include">
+      <files mask="app_init.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="amazon_acs/apps/common/test_runner/inc" type="c_include">
+      <files mask="asd_log_config.h"/>
+      <files mask="flash_map_ext.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="amazon_acs/apps/rt106a/common/freertos/include" type="c_include">
+      <files mask="freertos_tasks_c_additions.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="amazon_acs/apps/rt106a/test_runner/inc/config_files" type="c_include">
+      <files mask="aws_demo.h"/>
+      <files mask="iot_demo_logging.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="board" type="c_include">
+      <files mask="board.h"/>
+      <files mask="clock_config.h"/>
+      <files mask="dcd.h"/>
+      <files mask="pin_mux.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="board" type="src">
+      <files mask="board.c"/>
+      <files mask="clock_config.c"/>
+      <files mask="dcd.c"/>
+      <files mask="pin_mux.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="component/serial_manager/usb_cdc_adapter" type="c_include">
+      <files mask="usb_device_config.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="doc" type="doc" toolchain="mcuxpresso armgcc">
+      <files mask="board.readme"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="linkscripts" type="src" toolchain="mcuxpresso">
+      <files mask="bss.ldt"/>
+      <files mask="bss_section.ldt"/>
+      <files mask="data.ldt"/>
+      <files mask="main_text.ldt"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="lwip/src/apps/sntp" type="src">
+      <files mask="sntp.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="lwip/src/include/lwip/apps" type="c_include">
+      <files mask="sntp.h"/>
+      <files mask="sntp_opts.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="mbedtls/amz_patch" type="src">
+      <files mask="net_sockets.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="scripts" type="other">
+      <files mask="README.md"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="scripts" type="script">
+      <files mask="gen_prov_json.py"/>
+      <files mask="provision.py"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="sln_alexa_iot/sln_acs_examples/ais_ffs_demo" type="binary" exclude="true">
+      <files mask="sln_alexa_iot_ais_ffs_demo.bin"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="source/ble" type="c_include">
+      <files mask="bt_hall_gatt_helpers.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="source/ble" type="src">
+      <files mask="ble_hal_adapter.c"/>
+      <files mask="bt_hal_gap.c"/>
+      <files mask="bt_hal_gatt.c"/>
+      <files mask="bt_hall_gatt_helpers.c"/>
+      <files mask="wiced_bt_cfg.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="source" type="c_include">
+      <files mask="ais_alerts.h"/>
+      <files mask="ais_buttons.h"/>
+      <files mask="ais_continuous_utterance.h"/>
+      <files mask="aisv2_app.h"/>
+      <files mask="app_aws_shadow.h"/>
+      <files mask="app_events.h"/>
+      <files mask="audio_processing_task.h"/>
+      <files mask="aws_iot_demo_shadow.h"/>
+      <files mask="aws_ota_check.h"/>
+      <files mask="dhcp_server.h"/>
+      <files mask="fault_handlers.h"/>
+      <files mask="ffs_provision_cli.h"/>
+      <files mask="iot_pkcs11_pal.h"/>
+      <files mask="perf.h"/>
+      <files mask="reconnection_task.h"/>
+      <files mask="sln_convert.h"/>
+      <files mask="sln_reset.h"/>
+      <files mask="sln_shell.h"/>
+      <files mask="streamer_pcm.h"/>
+      <files mask="switch.h"/>
+      <files mask="tcpip_manager.h"/>
+      <files mask="ux_attention_system.h"/>
+      <files mask="wifi_management.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot/sln_acs_examples/ais_ffs_demo" target_path="source" type="src">
+      <files mask="ais_alerts.c"/>
+      <files mask="ais_buttons.c"/>
+      <files mask="ais_continuous_utterance.c"/>
+      <files mask="aisv2_app.c"/>
+      <files mask="app_aws_shadow.c"/>
+      <files mask="app_init.c"/>
+      <files mask="app_smart_home_task.c"/>
+      <files mask="audio_processing_task.c"/>
+      <files mask="aws_iot_demo_shadow.c"/>
+      <files mask="aws_ota_check.c"/>
+      <files mask="dhcp_server.c"/>
+      <files mask="fault_handlers.c"/>
+      <files mask="ffs_provision_cli.c"/>
+      <files mask="iot_freertos_init.c"/>
+      <files mask="main.c"/>
+      <files mask="main_demo.c"/>
+      <files mask="perf.c"/>
+      <files mask="reconnection_task.c"/>
+      <files mask="sln_convert.c"/>
+      <files mask="sln_reset.c"/>
+      <files mask="sln_shell.c"/>
+      <files mask="sln_time_utils.c"/>
+      <files mask="streamer_pcm.c"/>
+      <files mask="switch.c"/>
+      <files mask="tcpip_manager.c"/>
+      <files mask="ux_attention_system.c"/>
+      <files mask="wifi_management.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot" target_path="board" type="c_include">
+      <files mask="sdmmc_config.h"/>
+    </source>
+    <source path="boards/sln_alexa_iot" target_path="board" type="src">
+      <files mask="sdmmc_config.c"/>
+    </source>
+    <source path="boards/sln_alexa_iot" target_path="codec/tfa9xxx" type="c_include">
+      <files mask="tfa_config_TFA9894N2A1_48kHz_PUI.h"/>
+    </source>
+  </example>
+</ksdk:examples>
